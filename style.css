@@ -301,7 +301,7 @@ h1.visible, h2.visible, h4.visible{
 
 @media screen and (max-width: 450px) {
     .sc-1 h1 {
-        top: 5%;
+        top: 2%;
         font-size: 11vw;
         line-height: 11.5vw;
     }
