@@ -10,8 +10,15 @@ body{
     background-color: black;
 }
 
+@font-face {
+    font-family: 'samsungfont';
+    src: url(./iCiel-Samsung-Sharp-Sans-Bold/iCiel-SamsungSharpSans-Bold_SMCPS.ttf) format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
 h1, h2, h3, h4{
-    font-family: "Noto Sans", sans-serif;
+    font-family: "samsungfont", sans-serif;
     color: #fff;
 }
 
@@ -25,7 +32,7 @@ h1{
 h2{
     font-size: 5.5vw;
     font-weight: 600;
-    line-height: 6vw;
+    line-height: 6.5vw;
 }
 
 h3 {
@@ -37,7 +44,7 @@ h3 {
 h4 {
     font-size: 3.45vw;
     font-weight: 400;
-    line-height: 3.6vw;
+    line-height: 4vw;
 }
 
 p{
@@ -50,7 +57,7 @@ p{
 /* main */
 .sc-1{
     width: 100%;
-    margin-top: 8%;
+    margin-top: 5%;
     position: relative;
 }
 
@@ -81,7 +88,7 @@ p{
     width: 100%;
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 3px;
     filter: 
     drop-shadow(-5px -5px 5px rgba(255, 255, 255, 0.7)) 
     drop-shadow(5px -5px 5px rgba(255, 255, 255, 0.7));
@@ -117,7 +124,7 @@ p{
 }
 
 .sc-2 .sc-2-1 h4{
-    width: 75%;
+    width: 80%;
     margin: 5% auto 0;
     text-align: center;
 }
@@ -210,7 +217,7 @@ h1,
 h3{
     opacity: 0;
     /* Ẩn ban đầu */
-    margin-top: 100px;
+    margin-top: -50px;
     /* Vị trí ban đầu (dưới) */
     transition: opacity 0.5s ease, margin-top 0.5s ease;
 }
@@ -222,6 +229,30 @@ h3.visible{
     margin-top: 0;
     /* Trượt lên vị trí gốc */
 }
+
+h1.visible, h2.visible, h4.visible{
+    display: inline-block;
+    padding: 3% 0px 0;
+    -webkit-text-stroke: 0.08vw white;
+    text-stroke: 1px white;
+    color: transparent;
+    background: linear-gradient(to right, white 50%, transparent 50%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: transparent 3s linear forwards;
+}
+
+@keyframes transparent {
+    0% {
+        background-position: right;
+    }
+
+    100% {
+        background-position: left;
+    } 
+}
+
 
 /* responsive */
 @media screen and (max-width: 990px) {
@@ -270,8 +301,8 @@ h3.visible{
 
 @media screen and (max-width: 450px) {
     .sc-1 h1 {
-        top: 5%;
-        font-size: 12vw;
+        top: -5%;
+        font-size: 11vw;
         line-height: 11.5vw;
     }
 
@@ -284,7 +315,7 @@ h3.visible{
 
     .sc-2 .sc-2-1 h4 {
         width: 95%;
-        margin: 12% auto 0;
+        margin: 5% auto 0;
         font-size: 4.5vw;
         line-height: 5.3vw;
     }
@@ -304,13 +335,13 @@ h3.visible{
     }
 
     .sc-2 .sc-2-2 h2 {
-        width: 85%;
+        width: 95%;
         margin: 5% auto 0;
     }
 
     h2 {
         font-size: 7vw;
-        line-height: 7.5vw;
+        line-height: 8vw;
     }
 
     .quote-1, .quote-2, .quote-3, .quote-4{
